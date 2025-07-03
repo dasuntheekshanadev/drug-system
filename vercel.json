@@ -2,10 +2,13 @@
     "version": 2,
     "builds": [
       {
-        "src": "index.html",
+        "src": "package.json",
         "use": "@vercel/static-build",
         "config": {
-          "distDir": "dist"
+          "distDir": "dist",
+          "buildCommand": "npm run build",
+          "devCommand": "vite",
+          "installCommand": "npm install"
         }
       }
     ],
@@ -16,6 +19,6 @@
       }
     ],
     "env": {
-      "VITE_API_URL": "YOUR_BACKEND_URL"
+      "VITE_API_URL": "http://13.219.89.22:5000/api"
     }
   }
